@@ -112,14 +112,14 @@ export class InputLayer {
 			renderer.domElement,
 		);
 		leftTransformControls.attach(leftControllerIndicator);
-		scene.add(leftTransformControls);
+		scene.add(leftTransformControls.getHelper());
 
 		const rightTransformControls = new TransformControls(
 			camera,
 			renderer.domElement,
 		);
 		rightTransformControls.attach(rightControllerIndicator);
-		scene.add(rightTransformControls);
+		scene.add(rightTransformControls.getHelper());
 
 		const resizeObserver = new ResizeObserver(() => {
 			this.resize();
